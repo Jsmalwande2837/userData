@@ -48,6 +48,7 @@ const UserDetailScreen: React.FC = ({ route }) => {
             <TextInput
                 placeholder={"Name"}
                 value={editedName}
+                placeholderTextColor={"#000"}
                 style={styles.defaultTextInput}
                 secureTextEntry={false}
                 keyboardType={'default'}
@@ -56,6 +57,7 @@ const UserDetailScreen: React.FC = ({ route }) => {
 
             <TextInput
                 placeholder={"Email"}
+                placeholderTextColor={"#000"}
                 value={editedEmail}
                 style={styles.defaultTextInput}
                 secureTextEntry={false}
@@ -66,6 +68,7 @@ const UserDetailScreen: React.FC = ({ route }) => {
             <TextInput
                 placeholder={"Phone"}
                 value={editedPhone}
+                placeholderTextColor={"#000"}
                 style={styles.defaultTextInput}
                 secureTextEntry={false}
                 keyboardType={'default'}
@@ -78,6 +81,7 @@ const UserDetailScreen: React.FC = ({ route }) => {
                 value={editedWebsite}
                 style={styles.defaultTextInput}
                 secureTextEntry={false}
+                placeholderTextColor={"#000"}
                 keyboardType={'default'}
                 autoCapitalize='none'
                 onChangeText={setEditedWebsite} />
@@ -88,6 +92,7 @@ const UserDetailScreen: React.FC = ({ route }) => {
                 style={styles.defaultTextInput}
                 secureTextEntry={false}
                 keyboardType={'default'}
+                placeholderTextColor={"#000"}
                 autoCapitalize='none'
                 onChangeText={setEditedAddress} />
 
@@ -125,7 +130,7 @@ const styles = StyleSheet.create({
         borderRadius: 10,
         borderWidth: 1,
         paddingLeft: 10,
-        height: 45
+        height: 55
 
     },
     buttonColor: {
@@ -146,7 +151,8 @@ const styles = StyleSheet.create({
         fontSize: 14,
         fontStyle: 'normal',
         fontWeight: '700',
-        padding: 2
+        padding: 2,
+        color: "#000"
     },
 
 });

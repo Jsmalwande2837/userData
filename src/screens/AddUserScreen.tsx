@@ -55,6 +55,7 @@ const AddUserScreen: React.FC = () => {
                 <TextInput
                     placeholder={"Name"}
                     value={formData.name}
+                    placeholderTextColor={"#000"}
                     style={styles.defaultTextInput}
                     secureTextEntry={false}
                     keyboardType={'default'}
@@ -64,6 +65,7 @@ const AddUserScreen: React.FC = () => {
                 <TextInput
                     placeholder={"Email"}
                     value={formData.email}
+                    placeholderTextColor={"#000"}
                     style={styles.defaultTextInput}
                     secureTextEntry={false}
                     keyboardType={'default'}
@@ -74,6 +76,7 @@ const AddUserScreen: React.FC = () => {
                 <TextInput
                     placeholder={"Phone"}
                     value={formData.phone}
+                    placeholderTextColor={"#000"}
                     style={styles.defaultTextInput}
                     secureTextEntry={false}
                     keyboardType={'number-pad'}
@@ -84,6 +87,7 @@ const AddUserScreen: React.FC = () => {
                 <TextInput
                     placeholder={"Website"}
                     value={formData.website}
+                    placeholderTextColor={"#000"}
                     style={styles.defaultTextInput}
                     secureTextEntry={false}
                     keyboardType={'default'}
@@ -93,6 +97,7 @@ const AddUserScreen: React.FC = () => {
                 <TextInput
                     placeholder={"Address"}
                     value={formData.address}
+                    placeholderTextColor={"#000"}
                     style={styles.defaultTextInput}
                     secureTextEntry={false}
                     keyboardType={'default'}
@@ -134,7 +139,7 @@ const styles = StyleSheet.create({
         borderRadius: 10,
         borderWidth: 1,
         paddingLeft: 10,
-        height: 45
+        height: 55
 
     },
     buttonColor: {

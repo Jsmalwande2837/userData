@@ -1,6 +1,6 @@
 // UserListScreen.tsx
 import React, { useEffect, useState } from 'react';
-import { View, Text, TouchableOpacity, FlatList, Image } from 'react-native';
+import { View, Text, TouchableOpacity, FlatList, Image, StyleSheet } from 'react-native';
 import axios from 'axios';
 import { useNavigation } from '@react-navigation/native';
 import { Card } from 'react-native-paper';
@@ -39,8 +39,8 @@ const UserListScreen: React.FC = () => {
                         <View>
                             <Image source={{ uri: "https://reqres.in/img/faces/2-image.jpg" }}
                                 style={{ width: '100%', height: 150, }} />
-                            <Text>Username: {item.name}</Text>
-                            <Text>Email: {item.email}</Text>
+                            <Text style={styles.textStyle}>Username: {item.name}</Text>
+                            <Text style={styles.textStyle}>Email: {item.email}</Text>
                         </View>
 
                     </TouchableOpacity>
@@ -51,3 +51,16 @@ const UserListScreen: React.FC = () => {
 };
 
 export default UserListScreen;
+
+
+const styles = StyleSheet.create({
+
+    textStyle: {
+        fontSize: 14,
+        fontStyle: 'normal',
+        fontWeight: '700',
+        padding: 2,
+        color: "#000"
+    },
+
+});
