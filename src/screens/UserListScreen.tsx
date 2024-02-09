@@ -42,6 +42,7 @@ const UserListScreen: React.FC = () => {
                             <Text style={styles.textStyle}>Username: {item.name}</Text>
                             <Text style={styles.textStyle}>Email: {item.email}</Text>
                             <Text style={styles.textStyle}>Password: {item.email}</Text>
+                            <Text style={styles.textStyle}>Mobile: {item.email}</Text>
                         </View>
 
                     </TouchableOpacity>
