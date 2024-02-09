@@ -1,6 +1,6 @@
 // UserDetailScreen.tsx
 import React, { useState } from 'react';
-import { View, Text, TextInput, Button, StyleSheet } from 'react-native';
+import { View, Text, TextInput, Button, StyleSheet, ScrollView } from 'react-native';
 import axios from 'axios';
 import { useNavigation } from '@react-navigation/native';
 import { Card, TouchableRipple } from 'react-native-paper';
@@ -33,80 +33,84 @@ const UserDetailScreen: React.FC = ({ route }) => {
     };
 
     return (
-        <View style={styles.container}>
-            <Card
-                elevation={5}
-                mode={'elevated'}
-                style={{ padding: 10 }}>
-                <Text style={styles.textStyle}>Name: {user.name}</Text>
-                <Text style={styles.textStyle}>Email: {user.email}</Text>
-                <Text style={styles.textStyle}>phone: {user.phone}</Text>
-                <Text style={styles.textStyle}>website: {user.website}</Text>
-                <Text style={styles.textStyle}>address: {street + " " + suite + " " + zipcode}</Text>
-            </Card>
-
-            <TextInput
-                placeholder={"Name"}
-                value={editedName}
-                placeholderTextColor={"#000"}
-                style={styles.defaultTextInput}
-                secureTextEntry={false}
-                keyboardType={'default'}
-                autoCapitalize='none'
-                onChangeText={setEditedName} />
-
-            <TextInput
-                placeholder={"Email"}
-                placeholderTextColor={"#000"}
-                value={editedEmail}
-                style={styles.defaultTextInput}
-                secureTextEntry={false}
-                keyboardType={'default'}
-                autoCapitalize='none'
-                onChangeText={setEditedEmail} />
-
-            <TextInput
-                placeholder={"Phone"}
-                value={editedPhone}
-                placeholderTextColor={"#000"}
-                style={styles.defaultTextInput}
-                secureTextEntry={false}
-                keyboardType={'default'}
-                autoCapitalize='none'
-                onChangeText={setEditedPhone} />
+        <ScrollView>
 
 
-            <TextInput
-                placeholder={"Website"}
-                value={editedWebsite}
-                style={styles.defaultTextInput}
-                secureTextEntry={false}
-                placeholderTextColor={"#000"}
-                keyboardType={'default'}
-                autoCapitalize='none'
-                onChangeText={setEditedWebsite} />
+            <View style={styles.container}>
+                <Card
+                    elevation={5}
+                    mode={'elevated'}
+                    style={{ padding: 10 }}>
+                    <Text style={styles.textStyle}>Name: {user.name}</Text>
+                    <Text style={styles.textStyle}>Email: {user.email}</Text>
+                    <Text style={styles.textStyle}>phone: {user.phone}</Text>
+                    <Text style={styles.textStyle}>website: {user.website}</Text>
+                    <Text style={styles.textStyle}>address: {street + " " + suite + " " + zipcode}</Text>
+                </Card>
 
-            <TextInput
-                placeholder={"Address"}
-                value={editedAddress}
-                style={styles.defaultTextInput}
-                secureTextEntry={false}
-                keyboardType={'default'}
-                placeholderTextColor={"#000"}
-                autoCapitalize='none'
-                onChangeText={setEditedAddress} />
+                <TextInput
+                    placeholder={"Name"}
+                    value={editedName}
+                    placeholderTextColor={"#000"}
+                    style={styles.defaultTextInput}
+                    secureTextEntry={false}
+                    keyboardType={'default'}
+                    autoCapitalize='none'
+                    onChangeText={setEditedName} />
+
+                <TextInput
+                    placeholder={"Email"}
+                    placeholderTextColor={"#000"}
+                    value={editedEmail}
+                    style={styles.defaultTextInput}
+                    secureTextEntry={false}
+                    keyboardType={'default'}
+                    autoCapitalize='none'
+                    onChangeText={setEditedEmail} />
+
+                <TextInput
+                    placeholder={"Phone"}
+                    value={editedPhone}
+                    placeholderTextColor={"#000"}
+                    style={styles.defaultTextInput}
+                    secureTextEntry={false}
+                    keyboardType={'default'}
+                    autoCapitalize='none'
+                    onChangeText={setEditedPhone} />
 
 
-            <TouchableRipple
-                rippleColor={"#EEF6F9"}
-                centered={true}
-                style={styles.buttonStyle}
-                onPress={() => updateUser()}>
-                <Text style={styles.buttonColor}>{"Update User"}</Text>
-            </TouchableRipple>
+                <TextInput
+                    placeholder={"Website"}
+                    value={editedWebsite}
+                    style={styles.defaultTextInput}
+                    secureTextEntry={false}
+                    placeholderTextColor={"#000"}
+                    keyboardType={'default'}
+                    autoCapitalize='none'
+                    onChangeText={setEditedWebsite} />
+
+                <TextInput
+                    placeholder={"Address"}
+                    value={editedAddress}
+                    style={styles.defaultTextInput}
+                    secureTextEntry={false}
+                    keyboardType={'default'}
+                    placeholderTextColor={"#000"}
+                    autoCapitalize='none'
+                    onChangeText={setEditedAddress} />
 
 
-        </View>
+                <TouchableRipple
+                    rippleColor={"#EEF6F9"}
+                    centered={true}
+                    style={styles.buttonStyle}
+                    onPress={() => updateUser()}>
+                    <Text style={styles.buttonColor}>{"Update User"}</Text>
+                </TouchableRipple>
+
+
+            </View>
+        </ScrollView>
     );
 };
 
